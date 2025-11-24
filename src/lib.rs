@@ -1,3 +1,5 @@
+#![cfg_attr(not(feature = "std"), no_std)]
+
 //! The `rust-unidecode` library is a Rust port of Sean M. Burke's famous
 //! [`Text::Unidecode`](http://search.cpan.org/~sburke/Text-Unidecode-1.23/lib/Text/Unidecode.pm)
 //! module for Perl. It transliterates Unicode strings such as "Æneid" into pure
@@ -52,6 +54,7 @@ use data::MAPPING;
 ///
 /// These guarantees/warnings are paraphrased from the original
 /// `Text::Unidecode` documentation.
+#[cfg(feature = "std")]
 pub fn unidecode(s: &str) -> String {
     s.chars().map(|ch| unidecode_char(ch)).collect()
 }

@@ -15,3 +15,7 @@ keywords = [
   "transliteration"
 ]
 license = "BSD-3-Clause"
+
+[features]
+default = ["std"]
+std = []
