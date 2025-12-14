@@ -15,6 +15,7 @@ keywords = [
   "transliteration"
 ]
 license = "BSD-3-Clause"
+edition = "2024"
 
 [features]
 default = ["std"]
